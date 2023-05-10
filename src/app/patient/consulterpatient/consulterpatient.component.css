@@ -1,0 +1,40 @@
+.h1{
+    margin-left: 20%;
+    margin-top: 1%;
+    font-family: 'Gill Sans' ;
+    font-weight: bold;
+    color: rgb(28, 142, 150);
+
+  }
+  .table{
+    margin-left: 50%;
+ 
+  }
+  td, th {
+    text-align: left;
+  }
+ 
+
+  
+  .bt{
+    margin-left: 80%;
+    
+    
+  }
+  .b1{
+    margin-right: 2%;
+  }
+
+.p1{
+  font-size:  50px;
+  font-family: 'Gill Sans' ;
+  font-weight: bold;
+  padding: 10px;
+   
+
+}
+.img-fluid {
+  width: 120px;
+  margin-left: 20%;
+  margin-right: 2%; 
+}

@@ -1,0 +1,29 @@
+.h1{
+    margin-left: 10%;
+    margin-top: 3%;
+    font-family: 'Gill Sans' ;
+    font-weight: bold;
+    color: rgb(28, 142, 150);
+  
+  }
+  .bt{
+    margin-left: 204%;
+    margin-top: 5%;
+    
+  }
+  .table td {
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1);
+    
+  }
+  
+  .table-hover td:hover {
+    transform: scale(0.95);
+  }
+  .table{
+    margin-left:10%;
+    margin-top: 3%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 1%;
+  }
+  

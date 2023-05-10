@@ -1,0 +1,55 @@
+
+  .images-container {
+    display: flex;
+    flex-wrap: wrap;
+margin-top: -10%;
+   
+  }
+  
+  .image {
+    width: calc(100% /5 - 10px);
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+    margin-right: 50px; 
+    margin-left: 30px;
+   
+  
+    
+  }
+  .image{
+    transition: all 0.3s;
+}
+.image:hover{
+    transform: scale(1.15);
+}
+ 
+.input-group {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 3%;
+}
+
+.input-group-append button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.h1{
+  margin-left: 3%;
+  margin-top: 3%;
+  font-family: 'Gill Sans' ;
+  font-weight: bold;
+  color: rgb(28, 142, 150);
+
+}
+.b1{
+  margin-left: 75%;
+
+}
+.b2{
+  margin-right: 2%;
+}
+.ch{
+  margin-left: 6%;
+}

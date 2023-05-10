@@ -1,0 +1,66 @@
+<div class="bg-image" 
+     style="background-image: url('../../../assets/img/bg2.jpg');
+        ; background-size: cover;  ;
+       ">
+       <app-navbar></app-navbar>
+       <app-navpatient></app-navpatient>
+<section class="vh-100  ">        
+  <div class="container py-5 h-100">
+      <div class="row justify-content-center align-items-center h-100" style="margin-top: -3%;">
+          <div class="col-12 col-lg-9 col-xl-7">
+              <div class="card shadow-2-strong shadow-lg" style="border-radius: 15px;">
+                  <div class="card-body p-4 p-md-5">
+                 
+                 <div class="  text-info col-sm-8 " style="margin-top: -5%;">
+                 <h1  > Ajouter consultation</h1>
+                    
+                 </div>
+                 <h2 class="text-danger msg " >{{msg}}</h2>
+                 
+                 <form  method="post" #consultationform="ngForm" (ngSubmit)="AjouterCONS(consultationform.value)" autocomplete="off">
+                  <div class="form-group"> 
+                    <label for="Nom patient "><b>ID</b> </label>
+                    
+                    <input type="text" list="patients"    class="form-control" (change)="detailPatient(consultationform.value.id)" name="id" ngModel >
+                         <datalist id="patients">
+                        <option *ngFor="let patient of patients" value="{{patient.id}}">{{patient.nompatient}} {{patient.prenompatient}}
+                      </datalist>
+                
+                    </div>
+                  <div class="form-group">
+                    <input type="hidden" name="id_patient" ngModel="{{patient.id}}" >
+                    <label  class="i" ><b>Nom patient</b> </label>
+                    <input type="text" class="form-control" name="nompatient" #namepatient="ngModel" readonly ngModel="{{patient.nompatient}}" placeholder=" ....................">
+                    <div class="alert alert-danger" *ngIf="namepatient.touched && !namepatient.valid">Nom patientest obligatoire</div>
+                  </div>
+                  <div class="form-group">
+                    <label class="i" ><b>Prénom patient</b></label>
+                    <input type="text" class="form-control" name="prenompatient" readonly #prenompatient="ngModel" ngModel="{{patient.prenompatient}}" placeholder=".............">
+                    <div class="alert alert-danger" *ngIf="prenompatient.touched && !prenompatient.valid">Prénom patientest obligatoire</div>
+                  </div>
+                  <div class="form-group"  >
+                    <label  class="form-label"><b>Date</b></label>
+                    <input type="date" class="form-control" name="date" #date="ngModel"   ngModel>
+                    <div class="alert alert-danger" *ngIf="date.touched && !date.valid">date est obligatoire</div>
+                  </div>
+                 
+  <br>
+  <div class="form-group">
+    <label   class="form-label"><b>Consultation </b></label>
+    <textarea class="form-control"   rows="3" name="consultation" #consultation="ngModel" placeholder="....." ngModel></textarea>
+    
+</div>
+<br>
+<div class="form-group" style="margin-left:40%;">
+ <button type="submit"   class="btn btn-primary"  value="Enregistrer"  >Enregistrer</button> 
+
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+</div>

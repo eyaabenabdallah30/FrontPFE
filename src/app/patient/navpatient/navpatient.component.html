@@ -1,0 +1,30 @@
+    <!-- Sidebar -->
+
+    <nav   class="collapse d-lg-block sidebar collapse bg-white  "   >
+        <div class="position-sticky" >
+          <div class="list-group list-group-flush mx-3 mt-4" >
+            <a 
+              routerLink="/interface" class="list-group-item list-group-item-action py-4 ripple"aria-current="true">
+              <img src="../../assets/img/home.png" >
+              <i class="fas fa-tachometer-alt fa-fw me-1"></i><span>Accueil</span>
+            </a>
+            
+            <a routerLink="/consulterpatient/{{id}}" class="list-group-item list-group-item-action py-4 ripple"  
+              > <img src="../../assets/img/info.png" ><i class="fas fa-lock fa-fw me-1"></i><span>Les informations </span></a
+            >  
+            <ng-container *ngIf="roleUser=='Médecin'">
+            <a  routerLink="/consultationaaffich/{{id}}" class="list-group-item list-group-item-action py-4 ripple"
+              > <img src="../../assets/img/consultation.png" ><i class="fas fa-chart-line fa-fw me-1 " ></i><span>Les Consultations </span></a
+            >
+           
+            <a  routerLink="/consulterord/{{id}}" class="list-group-item list-group-item-action py-4 ripple"
+              > <img src="../../assets/img/ord.png" ><i class="fas fa-chart-line fa-fw me-1 " ></i><span>Les Ordonnances</span></a
+            >
+            <a  routerLink="/consultercertificat/{{id}}" class="list-group-item list-group-item-action py-4 ripple"
+            > <img src="../../assets/img/certificate.png" ><i class="fas fa-chart-line fa-fw me-1 " ></i><span>Les certificats médicale </span></a
+          >
+        </ng-container>
+          </div>
+        </div>
+      </nav>
+  

@@ -1,0 +1,67 @@
+
+<div class="bg-image" 
+     style="background-image: url('../../../assets/img/bg2.jpg');
+            height: 60vh ; background-size: cover;
+       ">
+       <app-navbar></app-navbar>
+       <app-navrv></app-navrv>
+
+
+
+        <section class="vh-100  body">
+        
+            <div class="container py-5 h-100"style="margin-top: -5%;" >
+        
+                <div class="row justify-content-center align-items-center h-100">
+        
+                    <div class="col-12 col-lg-9 col-xl-7">
+       
+                        <div class="card shadow-2-strong shadow-lg  " style="border-radius: 15px;">
+        
+                            <div class="card-body p-4 p-md-5">
+                         <div class="backIMg">
+                          <div class="d-flex align-items-center  flex-column text-primary ">
+                           <h1 class=" col-sm-8    " style="margin-right: 30%;"  > Modifier rendez-vous</h1>
+                               <h3 class="text-danger" style="margin-top: 1%;">{{msg}}</h3>
+                          
+                         </div>
+        
+                      <form  method="post" #RDVForm="ngForm" (ngSubmit)="ModifierRDV(RDVForm.value)">
+                <div class="form-group" type="hidden" > 
+                 
+                  
+                  <input type="hidden"  class="form-control"  name="Nompatient"  ngModel="{{rdv.Nompatient}}" readonly required>
+                 </div>
+               <div class="form-group"type="hidden"  > 
+                
+                
+                <input type="hidden"  class="form-control"  name="Prenompatient" ngModel="{{rdv.Prenompatient}}" readonly required>
+               </div>
+              <input type="hidden" name="id" ngModel="{{rdv.id}}">
+             <div class="form-group">
+                 
+                <input type="number" type="hidden"  placeholder="12 345 789"   class="form-control" name="Contact" ngModel="{{rdv.Contact}}" readonly required >
+              </div>
+             <div class="form-group" >
+                <label> <b>Date</b></label>
+                <input type="date" class="form-control" name="Date" ngModel="{{rdv.Date}}" required>
+              </div>
+              <div class="form-group">
+                <label for="Heure"> <b>Heure</b></label>
+                <input type="time" class="form-control" name="Heure" ngModel="{{rdv.Heure}}" required>
+              </div>
+              <br>
+             <div class="form-group"  >
+                <button type="submit" class="btn btn-primary " value="validé" style="margin-left: 40%;"  >validé</button> 
+             </div>
+              </form>
+                </div>
+              </div>
+                 </div>
+                </div>
+               </div>
+            </div>
+        </section>
+</div>
+
+

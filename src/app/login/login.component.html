@@ -1,0 +1,55 @@
+
+    <section class="h-100 gradient-form" style="background-color: #eee;">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-xl-10">
+            <div class="card rounded-3 text-black">
+              <div class="row g-0">
+                <div class="col-lg-6">
+                  
+                  <div class="card-body p-md-5 mx-md-4">
+                  <div  >
+                    <img  src="assets/img/arab.jpg" style="width: 180px;;" >
+                  </div>
+                    <div class="text-center"> 
+                      <h4 class="mt-1 mb-5 pb-1"style="color:#03b2d9;" >Login</h4>
+                      <h6 class="text-danger">{{msg}}</h6>
+                      
+                    </div>
+                    
+                    <form #userlog="ngForm" (submit)="loginUser(userlog.value)" >
+                      <div class="form-outline mb-4">
+                        <label  for="user" ><b> E-mail</b></label>
+                        <input type="text"  name="Email"  ngModel class="form-control"  #email="ngModel" placeholder="Exemple@gmail.com" minlength="15"  required />
+                        <div class="alert alert-danger" *ngIf="email.touched && !email.valid">Email est obligatoire
+                         
+                        </div>
+                        
+                      </div>
+    
+                      <div class="form-outline mb-4">
+                        <label class="form-label"  ><b>Mot de passe</b></label>
+                        <input type="password"  id="password" name ="Motdepasse" ngModel class="form-control" #Motdepasse="ngModel" placeholder="*********** " required  />
+                        <div class="alert alert-danger" *ngIf="Motdepasse.touched && !Motdepasse.valid">Password est obligatoire</div>
+                      </div>
+  
+                      <div class="text-center pt-1 mb-5 pb-1">
+                   <button type="submit"  class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"  >Login</button>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-center pb-4">
+                        <p class="mb-0 me-2"> Je n'ai pas encore de compte? </p>
+                        <button  type="" class="btn btn-outline-"><a routerLink="/signup">  cliquez ici </a> </button>
+                      </div>
+                    </form>
+    
+                  </div>
+                </div>
+                <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                  <img src="assets/img/icon.png" >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

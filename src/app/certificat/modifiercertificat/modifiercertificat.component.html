@@ -1,0 +1,47 @@
+
+
+<div class="bg-image" 
+     style="background-image: url('../../../assets/img/bg2.jpg');
+             ; background-size: cover;
+       ">
+       <app-navbar></app-navbar>
+       <app-navpatient></app-navpatient>
+<section class="vh-100    ">
+    <div class="row justify-content-center align-items-center h-100" style="margin-top: -5%;">
+
+        <div class="col-12 col-lg-9 col-xl-7">
+
+            <div class=" card shadow-2-strong shadow-lg  " style="border-radius: 15px;">
+                <div class="  p-4 p-md-5">
+            
+                    <div class="d-flex ">
+                     <h1 class=" col-sm-8  text-primary " style="margin-top: -5%;" >
+                         Modifier certificat</h1>
+                    </div>
+                    <h1 class="text-danger msg">{{msg}}</h1>
+   
+<form method="post" #certificatform="ngForm" (submit)="ModifierCertificat(certificatform.value)"  >
+    
+    <div class="form-group">
+      <input type="hidden" name="id" ngModel="{{certificat.id}}">
+
+
+      <label class="i" ><b>Diagnostique</b></label>
+      <textarea class="form-control" name="diagno" ngModel="{{certificat.diagno}}"  rows="5"></textarea>
+    </div>
+    <div class="form-group">
+      <label class="i" ><b>Date dédut</b> </label>
+      <input type="date" name="datedebut" class="form-control" ngModel="{{certificat.datedebut}}" >
+    </div>
+    <div class="form-group">
+      <label class="i" > <b>Date fin</b> </label>
+      <input type="date" class="form-control" name="datefin" ngModel="{{certificat.datefin}}" >
+    </div>
+    <button type="submit" class="btn btn-primary"  style="margin-top: 2%; margin-left: 42%; "> Validé </button>
+  </form>
+    </div>
+        </div>
+    </div>
+    </div>
+</section>
+</div>

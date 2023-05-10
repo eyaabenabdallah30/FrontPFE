@@ -1,0 +1,99 @@
+
+   <section class="h-100 gradient-form" style="background-color: #eee;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-xl-10">
+          <div class="card rounded-3 text-black">
+            <div class="row g-0">
+              <div class="col-lg-6">
+                <div class="card-body p-md-5 mx-md-4">
+                  <div  >
+                    <img  src="assets/img/arab.jpg" style="width: 180px;margin-top: -8%;" >
+                  </div>
+                  <h3 class="mb-4 pb-2 pb-md-0 mb-md-5" style="color:#03b2d9;;">Formulaire d'inscription </h3>
+                  <h1 class="mb-4 pb-2 pb-md-0 mb-md-5 text-danger" > {{msg}} </h1>
+              
+
+                  <form  method="post" #userform="ngForm" (ngSubmit)="saveUser(userform.value)" >
+      
+                    <div class="row">
+                      <div class="col-md-6 mb-4 pb-2">
+                        <div class="form-outline" >
+                        <label class="form-label" for="Nom"><b>Nom :</b></label>
+                          <input type="text"  name="Nom" ngModel class="form-control form-control-lg" #Nom=""ngModel="" placeholder="écrire votre nom " required />
+                          <div class="alert alert-danger" *ngIf="Prenom.touched && !Prenom.valid">*Obligatoire</div>
+
+                        </div>
+      
+                      </div>
+                      <div class="col-md-6 mb-4 pb-2">
+                        <div class="form-outline">
+                            <label class="form-label" ><b>Prénom :</b></label>
+                          <input  type="text"  name="Prenom" placeholder="votre prénom  " ngModel #Prenom="ngModel" class="form-control form-control-lg" required />
+                          <div class="alert alert-danger" *ngIf="Prenom.touched && !Prenom.valid">*Obligatoire</div>
+                        </div>
+      
+                      </div>
+                    </div>
+                    
+                      <div class="form-outline mb-4">
+                       
+                          <label class="form-label" for="email"><b>Email :</b></label>
+                          <input  type="text" name="Email" ngModel placeholder="Exemple@gmail.com" #Email="ngModel"  class="form-control form-control-lg" required />
+                          <div class="alert alert-danger" *ngIf="Email.touched && !Email.valid">*Obligatoire</div>
+
+                      </div>
+                      <div class="row">
+                      <div class="col-md-6 mb-4 pb-2" >
+                          <div class="form-outline">
+                          <label class="form-label" for="user"><b>Utilisateur :</b></label>
+                            <input type="text"  name="Utilisateur" placeholder="nom d'utilisateur" ngModel #Utilisateur="ngModel" class="form-control form-control-lg" required />
+                            <div class="alert alert-danger" *ngIf="Utilisateur.touched && !Utilisateur.valid">*Obligatoire</div>
+
+                            </div>
+                          </div>
+                      
+                      <div class="col-md-6 mb-4 pb-2">
+                        <div class="form-outline">
+                          <label class="form-label" for="password"><b>Mot de passe : </b></label>
+                          <input  type="password"  name="Motdepasse" placeholder="*********" ngModel #Motdepasse="ngModel" class="form-control form-control-lg" required />
+                          <div class="alert alert-danger" *ngIf="Motdepasse.touched && !Motdepasse.valid">*Obligatoire</div>
+
+                          
+                        </div>
+                       
+                    </div>
+      </div>
+                    <div class="row">
+                      <div class="col-11" >
+      
+                        <label class="form-label select-label"> <b>Rôle :</b></label>
+                        <select class="form-select form-select-lg mb-3" name="Role" ngModel #Role="ngModel" required>
+                         
+                          <option   >Médecin</option>
+                          <option  >secrétaire</option>
+                                <div class="alert alert-danger" *ngIf="Role.touched && !Prenom.valid">*Obligatoire</div>
+                        </select>
+                  
+
+                      </div>
+                    </div>
+      
+                    <div class="text-center pt-1 mb-5 pb-1">
+                      <input class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3 " value="Enregistrer" type="submit" />
+                    </div>
+                  </form>
+                  <a routerLink="/" ><b >Se connecter à un compte exsistant</b></a>
+                </div>
+              </div>
+              <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+          <img id="icon"src="assets/img/icon.png" >
+        </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+      </section>

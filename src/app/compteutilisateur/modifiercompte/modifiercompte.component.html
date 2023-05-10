@@ -1,0 +1,118 @@
+
+<section class="h-100 gradient-form" style="background-image:url('../../../assets/img/bg2.jpg');">
+  <nav class="navbar navbar-expand-lg navbar-dark  shadow-5-strong"   >
+    <div class="container-fluid">
+       <a class="navbar-brand" routerLink="/consultercompte">Med.File</a>
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="font-weight : bolder; font-size: large;">
+        <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" >
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+         
+        </ul>
+
+
+         <div class="nav-item dropdown" style="margin-right: 7%;">
+         <a  class="nav-link dropdown-toggle"   role="button" data-bs-toggle="dropdown" style="color: aliceblue; font-weight: bolder;"><img class="img" src="../../assets/img/user.png" > {{role}} </a>
+         <div class="dropdown-menu" style="background-color: transparent; background: transparent;border-color: transparent;">
+       <button  (click)="Logout()"   type="button" class="btn btn-primary" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock" viewBox="0 0 16 16">
+        <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/>
+      </svg> Logout</button>
+    
+         </div>
+          
+         </div>
+       
+      </div>
+    </div>
+
+  </nav>
+  
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100" style="margin-top: -3%;">
+        <div class="col-xl-10">
+          <div class="card rounded-3 text-black">
+            <div class="row g-0">
+              
+                <div class="card-body p-md-5 mx-md-4">
+  
+                  <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 text-primary"   > Formulaire de modification compte utilisateur   </h3>
+                  <h1 class="mb-4 pb-2 pb-md-0 mb-md-5 text-danger" style="margin-left: 30% ; font-size:30px;margin-top: -4%;"> {{error}}  </h1>
+                  <h3 class="mb-4 pb-2 pb-md-0 mb-md-5" style="color:green; ;">   </h3>
+
+                  <form  method="post" #userform="ngForm"   >
+      
+                    <div class="row">
+                      <div class="col-md-6 mb-4 pb-2">
+                        <div class="form-outline" >
+                        <label class="form-label" for="Nom"><b>Nom :</b></label>
+                          <input type="text"  name="Nom" ngModel="{{userData.Nom}}" #Nom="ngModel"   class="form-control form-control-lg" placeholder="Modifier  votre nom " required />
+                          <div class="alert alert-danger" *ngIf="Nom.touched && !Nom.valid">Nom est obligatoire</div>
+                        </div>
+      
+                      </div>
+                      <div class="col-md-6 mb-4 pb-2">
+                        <div class="form-outline">
+                            <label class="form-label" ><b>Prénom :</b></label>
+                          <input  type="text"  name="Prenom" placeholder="votre prénom  " ngModel="{{userData.Prenom}}" class="form-control form-control-lg" required />
+                          
+                        </div>
+      
+                      </div>
+                    </div>
+                    
+                      <div class="form-outline mb-4">
+                       
+                          <label class="form-label" for="email"><b>Email :</b></label>
+                          <input  type="text" name="Email" ngModel="{{userData.Email}}" placeholder="Exemple@gmail.com"  class="form-control form-control-lg" required />
+      
+                      </div>
+                      <div class="row">
+                      <div class="col-md-6 mb-4 pb-2" >
+                          <div class="form-outline">
+                          <label class="form-label" for="user"><b>Utilisateur :</b></label>
+                            <input type="text"  name="Utilisateur" placeholder="nom d'utilisateur" ngModel="{{userData.Utilisateur}}" class="form-control form-control-lg" required />
+                            </div>
+                          </div>
+                      
+                      <div class="col-md-6 mb-4 pb-2">
+                        <input  type="hidden"  name="id" placeholder="*********" ngModel="{{userData.id}}">
+                        <div class="form-outline">
+                          <label class="form-label" for="password"><b>Mot de passe : </b></label>
+                          <input  type="text"  name="Motdepasse" placeholder="*********" ngModel="{{userData.Motdepasse}}" class="form-control form-control-lg" required />
+                          
+                        </div>
+                       
+                    </div>
+      </div>
+                    <div class="row">
+                      <div class="col-11" >
+      
+                        <label class="form-label select-label"> <b>Rôle :</b></label>
+                        <select class="form-select form-select-lg mb-3" name="Role" ngModel="{{userData.Role}}" required>
+                          <option value="1" disabled> Rôle</option>
+                          <option  id="M" [selected]="userData.Role=='Médecin'" >Médecin</option>
+                          <option  id="S"  [selected]="userData.Role=='secrétaire'" >secrétaire</option>
+                          
+                        </select>
+      
+                      </div>
+                    </div>
+      
+                    <div class="text-center pt-1 mb-5 pb-1">
+                      <input class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3 " (click)="UpdateUser(userform.value)" value="Validé " type="submit" />
+                    </div>
+                  </form>
+                   
+                </div>
+              </div>
+         
+        </div>
+            </div>
+          </div>
+        </div>
+        
+    
+    
+    
+      </section>

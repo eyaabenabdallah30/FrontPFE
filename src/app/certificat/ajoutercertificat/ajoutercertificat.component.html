@@ -1,0 +1,60 @@
+
+<div class="bg-image" 
+     style="background-image: url('../../../assets/img/bg2.jpg');
+             ; background-size: cover;
+       ">
+       <app-navbar></app-navbar>
+       <app-navpatient></app-navpatient>
+<section class="vh-100    ">
+    <div class="row justify-content-center align-items-center h-100" style="margin-top: -3%;">
+
+        <div class="col-12 col-lg-9 col-xl-7">
+
+            <div class=" card shadow-2-strong shadow-lg  " style="border-radius: 15px;">
+                <div class="  p-4 p-md-5">
+            
+                    <div class=" text-info col-sm-8">
+                     <h1> Ajouter certificat</h1>
+                        
+                    </div>
+                    <h2 class="text-danger">{{msg}}</h2>
+<form method="post" #certificatform="ngForm" (ngSubmit)="AjoutCertifcat(certificatform.value)" autocomplete="off" >
+  <div class="form-group"> 
+    <label for="Nom patient "><b>ID</b> </label>
+    
+    <input type="text" list="patients" class="form-control" (change)="detailPatient(certificatform.value.id)" name="id" ngModel >
+    <datalist id="patients">
+   <option *ngFor="let p of patients" value="{{p.id}}">{{p.nompatient}} {{p.prenompatient}}
+ </datalist>
+    </div>
+    <div class="form-group">
+      <input type="hidden" name="id_patient" ngModel="" >
+      <label  class="i" >Nom patient </label>
+      <input type="hidden" name="id_patient" ngModel="{{patient.id}}">
+      <input type="text" class="form-control" name="nompatient" readonly ngModel="{{patient.nompatient}}"  placeholder=" ....................">
+    </div>
+    <div class="form-group">
+      <label class="i" >Prénom patient</label>
+      <input type="text" class="form-control" name="prenompatient" readonly ngModel="{{patient.prenompatient}}"  placeholder=".............">
+    </div>
+    <div class="form-group">
+      <label class="i" >Diagnostique</label>
+      <textarea class="form-control" name="diagno" ngModel  rows="4"></textarea>
+    </div>
+    <div class="form-group">
+      <label class="i" >Date dédut </label>
+      <input type="date" name="datedebut" class="form-control" ngModel >
+    </div>
+    <div class="form-group">
+      <label class="i" > Date fin </label>
+      <input type="date" class="form-control" name="datefin" ngModel >
+    </div>
+    <button type="submit" class="btn btn-primary"  style="margin-top: 2%; margin-left: 40%; "> Enregistrer</button>
+
+  </form>
+    </div>
+        </div>
+    </div>
+    </div>
+</section>
+</div>

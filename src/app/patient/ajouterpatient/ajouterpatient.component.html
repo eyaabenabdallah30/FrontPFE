@@ -1,0 +1,104 @@
+
+<div class="bg-image" 
+     style="background-image: url('../../../assets/img/bg2.jpg');
+            height: 60vh ; background-size: cover;
+       ">
+       <app-navbar></app-navbar>
+   
+<section  >
+    <div class="container py-5 h-100" style="margin-top: -2%;">
+        <div class=" row justify-content-center align-items-center ">
+            <div class="col-12 col-lg-9 col-xl-7">
+                <div class="card shadow-2-strong shadow-lg " style="border-radius: 15px;">
+                    <div class="p-4 p-md-5">
+                   <h1 class=" greeting col-sm-8 text-info " style="margin-top: -3%;"  > Ajouter nouveau patient </h1>
+                       <h1 class="   col-sm-8 text-center  m-auto text-danger  " style="margin: 1%; font-size: large; margin-top: 2%; ">{{msg}} </h1>
+               
+
+              <form   method="post" #patientform="ngForm" (ngSubmit)="AjoutPatient(patientform.value)" >
+    
+            <div class="form-group" > 
+        <label  ><b>Nom patient</b> </label>
+        <input type="text" class="form-control" name="nompatient" #nompatient="ngModel" ngModel required>
+        <div class="alert alert-danger" *ngIf="nompatient.touched && !nompatient.valid">Nom est obligatoire</div>
+        </div>
+   
+       <div class="form-group" > 
+        <label  ><b>Prénom patient</b> </label>
+        
+    <input type="text" class="form-control" name="prenompatient" #prenompatient="ngModel" ngModel required>
+    <div class="alert alert-danger" *ngIf="prenompatient.touched && !prenompatient.valid">Prénom est obligatoire</div>
+       </div>
+     <div class="form-group" >
+        <label> <b>Date-naissance </b></label>
+        <input type="date" class="form-control" name="datenaissance" #datenaissance="ngModel" ngModel required>
+        <div class="alert alert-danger" *ngIf="datenaissance.touched && !datenaissance.valid">Date naissance  est obligatoire</div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-6 mb-4" >
+      <label  class="mb-2 pb-1" ><b>Sexe</b> </label>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="sexe" value="Masculin" #sexe="ngModel"  ngModel  />
+        <div class="alert alert-danger" *ngIf="sexe.touched && !sexe.valid">Date naissance  est obligatoire</div>
+
+        <label class="form-check-label" for="inlineRadio1">Masculin</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="sexe" value="Féminin" #sexe="ngModel" ngModel  />
+        <div class="alert alert-danger" *ngIf="sexe.touched && !sexe.valid">Date naissance  est obligatoire</div>
+        <label class="form-check-label" for="inlineRadio2">Féminin </label>
+      </div>
+        </div>
+      </div>
+    <div class="form-group"style="margin-top: -3%;" name="etatcivil" #etatcivil="ngModel" ngModel>
+       <b>L'état civil </b>
+        <select class="form-select" aria-label="Default select example" name="etatcivil" #etatcivil="ngModel" ngModel >
+          <option selected disabled> </option>
+          <option >Célibataire</option>
+          <option>Marié</option>
+          <option >Divorcé</option>
+          <option >Veuve</option>
+          <div class="alert alert-danger" *ngIf="etatcivil.touched && !etatcivil.valid"> L'état civil naissance  est obligatoire</div>
+        </select>
+        
+      </div>
+    <br>
+    <div class="form-group" style="margin-top: -2%;">
+        <label for="tele"> <b>Téléphone</b></label>
+        <input type="number" placeholder="12 345 789"  class="form-control" name="telephone" #telephone="ngModel" ngModel required >
+        <div class="alert alert-danger" *ngIf="telephone.touched && !telephone.valid">  Telephone est obligatoire</div>
+
+      </div>
+      <div class="form-group">
+    <label class="form-label" for="email"><b>E-mail</b></label>
+    <input  type="email" id="email " class="form-control form-control-lg" name="email" #email="ngModel" ngModel required />
+    <div class="alert alert-danger" *ngIf="email.touched && !email.valid"> E-mail est obligatoire</div>
+
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="adresse"><b>Adresse</b></label>
+        <input type="text"  class="form-control form-control-lg"  name="adresse" #adresse="ngModel"ngModel required />
+        <div class="alert alert-danger" *ngIf="adresse.touched && !adresse.valid"> Adresse est obligatoire</div>
+          </div>
+      <br>
+      
+      <div class="form-group">
+        </div>
+    
+     <div class="form-group" style="margin-left: 30%;">
+        <button type="submit" class="btn btn-primary"  value="Enregistrer"  >Enregistrer</button> 
+
+        <button class="btn btn-primary" style="margin-left: 2%;"  routerLink="/interface">Annuler</button>
+     </div>
+      </form>
+        </div>
+      </div>
+         </div>
+        </div>
+       </div>
+  
+</section>
+
+</div>
+ 

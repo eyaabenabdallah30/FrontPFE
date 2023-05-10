@@ -1,0 +1,17 @@
+
+  /* Sidebar */
+  .sidebar {
+    margin-top: 6%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 58px 0 0; /* Height of navbar */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    width: 240px;
+    z-index: 600;
+    
+    
+  }
+  
+  

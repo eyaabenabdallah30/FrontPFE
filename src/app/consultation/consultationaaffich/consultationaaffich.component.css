@@ -1,0 +1,61 @@
+.h1{
+  margin-left: 13%;
+  margin-top: 1%;
+  font-family: 'Gill Sans' ;
+  font-weight: bold;
+  color: rgb(28, 142, 150);
+
+  }
+  .table{
+    margin-left: 20%;
+  }
+  
+  td p {
+  
+    word-break: normal;
+  } 
+ 
+  .bt{
+    margin-left: 60%;
+  } 
+
+  
+ 
+  .d{
+    transition: all 0.3s;
+}
+.d:hover{
+    transform: scale(1.15);
+}
+.tab{
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 1%;
+}
+.tab{
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 1%;
+}
+.table td {
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1);
+  
+}
+
+.table-hover td:hover {
+  transform: scale(0.95);
+}
+.p1{
+  font-size:  40px;
+  font-family: 'Gill Sans' ;
+  font-weight: bold;
+  padding: 10px;
+  
+}
+.img-fluid {
+  width: 100px;
+  margin-left: 20%;
+  margin-right: 2%; 
+}
+.btn-group{
+  margin-left: 6%;
+}

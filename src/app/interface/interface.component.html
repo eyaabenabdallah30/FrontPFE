@@ -1,0 +1,66 @@
+
+
+
+       <app-navbar></app-navbar>
+<div class="container">
+<h1 style="color: white;margin-top: 1%; font-family: 'Franklin Gothic Medium';">Med.File</h1></div>
+       <div  style="margin-top:7% "> 
+         
+         <div class="row">
+          <div class="col-md-4" >
+               <a routerLink="/RVaujourdhui"class="text-decoration-none" >
+             
+                 <div class="d-flex flex-column align-items-center">
+       
+            <img src="../../assets/img/date2.png"   class="img-fluid d "  alt=""  
+            style="width: 150px;margin-left: 10%;margin-right: 10%; ">
+            <p class="mt-2 text-center">Les rendez-vous pour aujourd'hui </p>
+                 </div>
+              </a>
+                 </div>
+            
+          
+            <div class="col-md-4">
+          <a href="consulterrv" class="text-decoration-none">
+            <div class="d-flex flex-column align-items-center">
+       <img src="../../assets/img/rv.png"   alt="Rendez-vous" class="img-fluid d" style="width: 150px;">
+           <p class="mt-2 text-center">Rendez-vous</p>
+            </div>
+            </a>
+            
+       </div>
+       <ng-container  *ngIf="role=='secrétaire'">
+          <div class="col-md-4" >
+        <a routerLink="/ajouterrv"class="text-decoration-none" >
+      
+          <div class="d-flex flex-column align-items-center">
+
+     <img src="../../assets/img/add.png"   class="img-fluid d "  alt=""  
+     style="width: 150px;margin-left: 10%;margin-right: 10%; ">
+     <p class="mt-2 text-center">Ajouter rendez-vous </p>
+          </div>
+       </a>
+          </div>
+          <div class="col-md-4">
+            <a routerLink="/ajouterpatient"class="text-decoration-none" >
+               <div class="d-flex flex-column align-items-center">
+   
+          <img src="../../assets/img/patient.png"   class="img-fluid d "  alt="Ajouter patient"  
+          style="width: 150px;margin-left: 10%;margin-right: 10%; ">
+          <p class="mt-2 text-center">Ajouter patient</p>
+               </div>
+            </a>
+               </div>
+          </ng-container>
+          <div class="col-md-4" >
+               <a routerLink="/dossierpatient"class="text-decoration-none" >
+                 <div class="d-flex flex-column align-items-center">
+            <img src="../../assets/img/dossier.png"   class="img-fluid d "  alt="Dossier patient"  
+            style="width: 150px;margin-left: 10%;margin-right: 10%; ">
+            <p class="mt-2 text-center">Dossier patient</p>
+                 </div>
+              </a>
+                 </div>
+         
+</div>
+</div>
