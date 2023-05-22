@@ -7,14 +7,15 @@
     margin-top: 1%;
     font-family: 'Gill Sans' ;
     font-weight: bold;
-    color: rgb(28, 142, 150);
+    color: white;
 
   }
   td p {
     word-break: normal;
-    word-break: break-all;
+  
 
   } 
+ 
   .d{
     transition: all 0.3s;
 }
@@ -50,4 +51,10 @@
   width: 100px;
   margin-left: 20%;
   margin-right: 2%; 
+}
+.content {
+  margin-left: 250px; /* Adjust this value to match the width of your sidebar */
+  padding: 1rem;
+  position: relative;
+  z-index: 200; /* Adjust this value as needed */
 }

@@ -1,17 +1,13 @@
 
-
-<div class="bg-image" 
-     style="background-image: url('../../../assets/img/bg2.jpg');
-            height: 60vh ; background-size: cover;
-       ">
+ 
        <app-navbar></app-navbar>
-     <app-navpatient></app-navpatient>
-<section  >
-    <div class="container py-5 h-100" style="margin-top: -2%;">
-        <div class=" row justify-content-center align-items-center h-100">
-            <div class="col-12 col-lg-9 col-xl-7">
-                <div class="card shadow-2-strong shadow-lg " style="border-radius: 15px;">
-                    <div class=" p-4 p-md-5">
+
+     <section class="vh-100  ">        
+      <div class="container py-5 h-100">
+          <div class="row justify-content-center align-items-center h-100" style="margin-top: 3%;"  >
+              <div class="col-12 col-lg-9 col-xl-7">
+                  <div class="card shadow-2-strong shadow-lg" style="border-radius: 15px;">
+                      <div class="card-body p-4 p-md-5">
                 
                     
                    <h1 class=" text-primary " style="margin: 1%; font-size: large; margin-top: -4%;font-size: xx-large;"  > Modifier les information patient</h1>
@@ -39,7 +35,7 @@
                 </div>
                 <br>
                 <div class="row">
-                  <div class="col-md-6 mb-4" >
+                  <div class="col-md-6 mb-4" style="margin-top: -4%;">
                 <label  class="mb-2 pb-1" ><b>Sexe</b> </label>
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="sexe" value="Masculin" #sexe="ngModel"  ngModel [checked]="patient.sexe=='Masculin'" />
@@ -90,7 +86,7 @@
                   </div>
     
      <div class="form-group">
-        <button type="submit" class="btn btn-primary"  value="Enregistrer" style="margin-left: 40%;" >Validé</button> 
+        <button type="submit" class="btn btn-primary col-lg-2 "  value="Enregistrer" style="margin-left: 39%;;" > Validé </button> 
        
     
      </div>
@@ -103,4 +99,3 @@
   
 </section>
 
-</div>

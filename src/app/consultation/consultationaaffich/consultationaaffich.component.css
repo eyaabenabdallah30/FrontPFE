@@ -1,9 +1,10 @@
 .h1{
   margin-left: 13%;
-  margin-top: 1%;
+  margin-top: 7%;
   font-family: 'Gill Sans' ;
   font-weight: bold;
-  color: rgb(28, 142, 150);
+  color: white;
+
 
   }
   .table{
@@ -14,7 +15,7 @@
   
     word-break: normal;
   } 
- 
+
   .bt{
     margin-left: 60%;
   } 
@@ -58,4 +59,10 @@
 }
 .btn-group{
   margin-left: 6%;
+}
+.content {
+  margin-left: 250px; /* Adjust this value to match the width of your sidebar */
+  padding: 1rem;
+  position: relative;
+  z-index: 200; /* Adjust this value as needed */
 }

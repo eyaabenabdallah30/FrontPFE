@@ -1,18 +1,12 @@
 
-<div class="bg-image" 
-     style="background-image: url('../../../assets/img/bg2.jpg');
-            height: 60vh ; background-size: cover;
-       ">
        <app-navbar></app-navbar>
        <app-navrv></app-navrv>
 
-
-
         <section class="vh-100  body">
         
-            <div class="container py-5 h-100" style="margin-top: -3%;" >
+            <div class="container py-5 h-100 content"   >
         
-                <div class="row justify-content-center align-items-center h-100">
+                <div class="row justify-content-center align-items-center h-100" style="margin-top :30px;">
         
                     <div class="col-12 col-lg-9 col-xl-7">
        
@@ -36,7 +30,8 @@
                 <div class="alert alert-danger" *ngIf="id.touched && !id.valid"> Id est obligatoire</div>
                      <datalist id="patients">
                     <option *ngFor="let patient of patients" value="{{patient.id}}" >{{patient.nompatient}} {{patient.prenompatient}}
-                        
+                     
+
                   </datalist>
           
                 </div>
@@ -58,7 +53,7 @@
              <div class="form-group">
                 <label for="Contact"> <b>Contact</b></label>
                 <input type="number" placeholder="12 345 789"   class="form-control" name="Contact" #Contact="ngModel" ngModel="{{patient.telephone}}" readonly required >
-                <div class="alert alert-danger" *ngIf="Contact.touched && !Date.valid"> Numero telephone est obligatoire !</div>
+                <div class="alert alert-danger" *ngIf="Contact.touched && !Contact.valid"> Numéro telephone est obligatoire !</div>
               </div>
              <div class="form-group" >
                 <label> <b>Date</b></label>
@@ -71,10 +66,9 @@
                 <div class="alert alert-danger" *ngIf="Heure.touched && !Heure.valid"> Date est obligatoire !</div>
               </div>
               <br>
-             <div class="form-group" style="margin-left: 35%;"  >
-                <button type="submit" class="btn btn-primary" value="validé  "  > Enregistrer </button> 
+             <div class="form-group" style="margin-left:40%;"  >
+                <button type="submit" class="btn btn-primary "    > Enregistrer </button> 
 
-                <button class="btn btn-primary"  type="reset"t value=""  style="margin: 5%;" >Annuler </button>
              </div>
               </form>
                 </div>
@@ -85,6 +79,6 @@
             </div>
         </section>
       
-</div>
+
 
  

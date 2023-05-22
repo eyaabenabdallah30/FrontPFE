@@ -6,7 +6,18 @@ td p {
   } 
   h1{
 
-    margin-top: -5%;
+    margin-top: -4%;
 
   }
+  .content {
+    margin-left: 250px; /* Adjust this value to match the width of your sidebar */
+    padding: 1rem;
+    position: relative;
+ 
+  }
+  .msg{
+    margin-left:30% ;
+    margin-top: 2%; ;
+    font-size: large;
+}
  

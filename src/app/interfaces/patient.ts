@@ -7,4 +7,5 @@ export interface Patient {
     telephone:string
     email :string
     adresse: string
+    id:string
 }

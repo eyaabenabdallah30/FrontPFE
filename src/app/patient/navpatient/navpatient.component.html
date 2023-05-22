@@ -1,8 +1,10 @@
     <!-- Sidebar -->
-
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
     <nav   class="collapse d-lg-block sidebar collapse bg-white  "   >
         <div class="position-sticky" >
-          <div class="list-group list-group-flush mx-3 mt-4" >
+          <div class="list-group list-group-flush mx-3 mt-4 content"  >
             <a 
               routerLink="/interface" class="list-group-item list-group-item-action py-4 ripple"aria-current="true">
               <img src="../../assets/img/home.png" >
@@ -21,10 +23,12 @@
               > <img src="../../assets/img/ord.png" ><i class="fas fa-chart-line fa-fw me-1 " ></i><span>Les Ordonnances</span></a
             >
             <a  routerLink="/consultercertificat/{{id}}" class="list-group-item list-group-item-action py-4 ripple"
-            > <img src="../../assets/img/certificate.png" ><i class="fas fa-chart-line fa-fw me-1 " ></i><span>Les certificats médicale </span></a
+            > <img src="../../assets/img/certificate.png" ><i class="fas fa-chart-line fa-fw me-1 " ></i><span style="text-align: justify;">Les certificats médicale</span></a
           >
         </ng-container>
           </div>
         </div>
       </nav>
-  
+    </div>
+  </div>
+</div>

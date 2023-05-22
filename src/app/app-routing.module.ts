@@ -14,7 +14,7 @@ import { ModifierordComponent } from './ordonnance/modifierord/modifierord.compo
 import { AjouterpatientComponent } from './patient/ajouterpatient/ajouterpatient.component';
 import { ConsulterpatientComponent } from './patient/consulterpatient/consulterpatient.component';
 import { ModiferpatientComponent } from './patient/modiferpatient/modiferpatient.component';
- import { AjouterrvComponent } from './rv/ajouterrv/ajouterrv.component';
+import { AjouterrvComponent } from './rv/ajouterrv/ajouterrv.component';
 import { ConsulterrvComponent } from './rv/consulterrv/consulterrv.component';
 import { ModifierrvComponent } from './rv/modifierrv/modifierrv.component';
 import { RVaujourdhuiComponent } from './rv/rvaujourdhui/rvaujourdhui.component';
@@ -22,6 +22,8 @@ import { ModifiercompteComponent } from './compteutilisateur/modifiercompte/modi
 import { SignupComponent } from './signup/signup.component';
 import {ConsultercompteComponent} from './compteutilisateur/consultercompte/consultercompte.component';
 import { ModifiercertificatComponent } from './certificat/modifiercertificat/modifiercertificat.component';
+import { InterfaceadminComponent } from './compteutilisateur/interfaceadmin/interfaceadmin.component';
+
 
 
 const routes: Routes = [
@@ -47,7 +49,7 @@ const routes: Routes = [
  {path:"RVaujourdhui",component:RVaujourdhuiComponent},
  {path:"modifiercompte/:idUser",component:ModifiercompteComponent},
  {path:"consultercompte",component:ConsultercompteComponent},
-
+ {path:"interfaceadmin",component:InterfaceadminComponent},
 
 ];
 

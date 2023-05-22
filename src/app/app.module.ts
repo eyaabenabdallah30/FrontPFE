@@ -29,6 +29,9 @@ import { RVaujourdhuiComponent } from './rv/rvaujourdhui/rvaujourdhui.component'
 import { ModifiercertificatComponent } from './certificat/modifiercertificat/modifiercertificat.component';
 import { ModifiercompteComponent } from './compteutilisateur/modifiercompte/modifiercompte.component';
 import { ConsultercompteComponent } from './compteutilisateur/consultercompte/consultercompte.component';
+import { InterfaceadminComponent } from './compteutilisateur/interfaceadmin/interfaceadmin.component';
+import { NavComponent } from './compteutilisateur/nav/nav.component';
+
 
 
 
@@ -68,6 +71,9 @@ import { ConsultercompteComponent } from './compteutilisateur/consultercompte/co
    ModifiercertificatComponent,
    ModifiercompteComponent,
    ConsultercompteComponent,
+   InterfaceadminComponent,
+   NavComponent,
+
   
  
  

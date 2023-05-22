@@ -1,17 +1,27 @@
 
   /* Sidebar */
   .sidebar {
-    margin-top: 6%;
+    margin-top: 5%;
     position: fixed;
-    top: 0;
-    bottom: 0;
+    top: 5px;
+    bottom: 4px;;
     left: 0;
-    padding: 58px 0 0; /* Height of navbar */
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-    width: 240px;
+    padding: 50px 0 0; /* Height of navbar */
+    font-family: '  Arial Narrow', Arial, sans-serif;
+    width: 230px;
     z-index: 600;
-    
-    
+    box-shadow: 0 4px 15px  ;
+    color: #0084ff;
+    margin-left: 3px;
+    z-index: 100;
   }
+
   
+  .sidebar a.active{
+    font-weight: bold;
+    color: #000;
+  }
+  .sidebar a:hover {
   
+    background-color: #d6f4f8;
+  }

@@ -14,7 +14,7 @@ export class InterfaceComponent {
     this.user=localStorage.getItem("user")
     
     this.role=JSON.parse(this.user).Role
-    if(this.role=='Administrateur'){window.location.href='/consultercompte'}
+    if(this.role=='Administrateur'){window.location.href='/interfaceadmin'}
     
     if(this.user!=null){
       console.log('nuuuuuuuuu')

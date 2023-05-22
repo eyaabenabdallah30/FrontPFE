@@ -1,29 +1,20 @@
-<div class="bg-image" 
-     style="background-image: url('../../../assets/img/bg2.jpg');
-         ; background-size: cover;
-       ">
+ 
        <app-navbar></app-navbar>
        <app-navpatient></app-navpatient>
 
-<section class="vh-100   ">
-        
-  <div class="container py-5 h-100">
-
-      <div class="row justify-content-center align-items-center h-100 " style="margin-top: -2%;">
-
-          <div class="col-12 col-lg-9 col-xl-7">
-
-              <div class=" card shadow-2-strong shadow-lg  " style="border-radius: 15px;">
-
-                  <div class="  p-4 p-md-5">
+       <section class="vh-100 content ">        
+        <div class="container py-5 h-100">
+            <div class="row justify-content-center align-items-center h-100" style="margin-top: 3%;" >
+                <div class="col-12 col-lg-9 col-xl-7">
+                    <div class="card shadow-2-strong shadow-lg" style="border-radius: 15px;">
+                        <div class="card-body p-4 p-md-5">
             
                 <div class=" text-info ">
-                 <h1 style="margin-top: -4%;" >
-                     Ajouter ordonnance</h1>
+                 <h1 style="margin-top: -5%;" > Ajouter ordonnance</h1>
                 </div>
                 <h2 class="text-danger msg "> {{msg}}</h2>
                 <form method="post" #ordonnanceform="ngForm" (ngSubmit)="Ajout(ordonnanceform.value)" >
-                  <div class="form-group" style="margin-top: -4%"> 
+                  <div class="form-group"  > 
                     <label for="Nom patient "><b>ID</b> </label>
                     
                     <input type="text" list="patients"    class="form-control" (change)="detailPatient(ordonnanceform.value.id)" name="id" ngModel >
@@ -55,7 +46,7 @@
   </div>
   <div class="form-group">
     <label  class="form-label"><b>Prescription</b></label>
-    <textarea class="form-control"  name="prescription" rows="5" placeholder="....." ngModel required></textarea>
+    <textarea class="form-control"  name="prescription" rows="3" placeholder="....." ngModel required></textarea>
 </div>
 <br>
 <div class="form-group" style="margin-left:40%;">
@@ -71,7 +62,7 @@
   </div>
 
 </section>
-</div>
+ 
 
 
 

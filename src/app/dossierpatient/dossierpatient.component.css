@@ -1,14 +1,14 @@
 
   .images-container {
     display: flex;
-    flex-wrap: wrap;
-margin-top: -10%;
+    margin-top: -10%;
+    align-items: center;
    
   }
-  
+
   .image {
     width: calc(100% /5 - 10px);
-    height: 100px;
+    height: 85px;
     width: 100px;
     margin: 20px;
     margin-right: 50px; 
@@ -28,6 +28,9 @@ margin-top: -10%;
   width: 100%;
   max-width: 500px;
   margin-top: 3%;
+  margin-left: 3%;
+  box-shadow: 0 4px 15px  ;
+      color: #4b4d4d;
 }
 
 .input-group-append button {
@@ -37,19 +40,13 @@ margin-top: -10%;
 
 .h1{
   margin-left: 3%;
-  margin-top: 3%;
+  margin-top: 7%;
   font-family: 'Gill Sans' ;
   font-weight: bold;
-  color: rgb(28, 142, 150);
+  color: white;
+
 
 }
-.b1{
-  margin-left: 75%;
 
-}
-.b2{
-  margin-right: 2%;
-}
-.ch{
-  margin-left: 6%;
-}
+
+

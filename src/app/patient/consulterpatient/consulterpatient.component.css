@@ -1,9 +1,9 @@
 .h1{
-    margin-left: 20%;
-    margin-top: 1%;
+    margin-left: 12%;
+    margin-top: 6%;
     font-family: 'Gill Sans' ;
     font-weight: bold;
-    color: rgb(28, 142, 150);
+    color: white;
 
   }
   .table{
@@ -13,13 +13,9 @@
   td, th {
     text-align: left;
   }
- 
-
-  
   .bt{
-    margin-left: 80%;
-    
-    
+    margin-left: 75%;
+    margin-top: -2%;
   }
   .b1{
     margin-right: 2%;
@@ -34,7 +30,18 @@
 
 }
 .img-fluid {
-  width: 120px;
+  width: 95px;
   margin-left: 20%;
   margin-right: 2%; 
+}
+td{
+  font-size: larger;
+  font-family: 'Times New Roman', Times, serif;
+  
+}
+.content {
+  margin-left: 250px; /* Adjust this value to match the width of your sidebar */
+  padding: 1rem;
+  position: relative;
+  z-index: 200; /* Adjust this value as needed */
 }

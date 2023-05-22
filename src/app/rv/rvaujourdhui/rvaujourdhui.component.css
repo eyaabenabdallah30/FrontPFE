@@ -1,9 +1,11 @@
 .h1{
-    margin-left: 10%;
-    margin-top: 3%;
-    font-family: 'Gill Sans' ;
-    font-weight: bold;
-    color: rgb(28, 142, 150);
+  margin-left: 9%;
+  margin-top: 8%;
+  font-family: 'Gill Sans' ;
+  font-weight: bold;
+  color: white;
+  font-size: 50px;
+
   
   }
   .bt{
@@ -14,16 +16,26 @@
   .table td {
     transition: transform 0.2s ease-in-out;
     transform: scale(1);
-    
+    text-align: center;
   }
+
+.table tr{
+  text-align: center;
+}
   
   .table-hover td:hover {
     transform: scale(0.95);
   }
   .table{
-    margin-left:10%;
+    margin-left: 16%;
     margin-top: 3%;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
     border-radius: 1%;
+  }
+  .content {
+    margin-left: 250px; /* Adjust this value to match the width of your sidebar */
+    padding: 1rem;
+    position: relative;
+    z-index: 200; /* Adjust this value as needed */
   }
   

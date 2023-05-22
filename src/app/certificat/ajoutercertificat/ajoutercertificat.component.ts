@@ -34,7 +34,10 @@ export class AjoutercertificatComponent {
     else{
    return this.certificatserviice.AddCertifcat(certificatUser).subscribe(data=>{
     console.log(data);
+
    window.location.href=`/consultercertificat/${this.id}`
+       this.msg='"Ajouter avec succés"'
+      return this.msg
    })
   }
   }

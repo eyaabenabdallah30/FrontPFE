@@ -1,29 +1,34 @@
 
     <!-- Sidebar -->
-
-    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white "  >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white justify-content-center  "  >
       <div class="position-sticky">
-        <div class="list-group list-group-flush mx-3 mt-4" >
+        <div class="list-group list-group-flush mx-3 mt-4 " >
           
         
           <a 
             routerLink="/interface" class="list-group-item list-group-item-action py-4 ripple"aria-current="true">
             <img src="../../assets/img/home.png" >
-            <i class="fas fa-tachometer-alt fa-fw me-1"></i><span>Accueil</span>
+            <i class="fas fa-tachometer-alt fa-fw me-1"></i><span  >Accueil</span>
           </a>
           
           <a routerLink="/consulterrv" class="list-group-item list-group-item-action py-4 ripple"
-            > <img src="../../assets/img/ca.png" ><i class="fas fa-lock fa-fw me-1"></i><span>Les rendez-vous</span></a
+            > <img src="../../assets/img/ca.png" ><i class="fas fa-lock fa-fw me-1"></i><span >Les rendez-vous</span></a
           >
           <a  routerLink="/RVaujourdhui" class="list-group-item list-group-item-action py-4 ripple"
-            > <img src="../../assets/img/date.png" ><i class="fas fa-chart-line fa-fw me-1 " ></i><span>Rendez-vous aujourd'hui</span></a
+            > <img src="../../assets/img/date.png" ><i class="fas fa-chart-line fa-fw me-1 " ></i><span >RDVS Aujourd'hui</span></a
           >
           <ng-container *ngIf="roleUser=='secrétaire'">
           <a  routerLink="/ajouterrv" class="list-group-item list-group-item-action py-4 ripple"
-            > <img src="../../assets/img/plus.png" ><i class="fas fa-chart-line fa-fw me-1 " ></i><span>Ajouter rendez-vous</span></a
+            > <img src="../../assets/img/plus.png" ><i class="fas fa-chart-line fa-fw me-1 " ></i><span>Ajouter RV</span></a
           >
         </ng-container>
         </div>
       </div>
     </nav>
-
+        </div>
+      </div>
+    </div>
+    
